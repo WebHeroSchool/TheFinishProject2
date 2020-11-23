@@ -1,0 +1,1232 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  padding-top: 22px;
+  margin-bottom: 54px;
+}
+
+.logo {
+  display: inline-block;
+  padding-left: 42px;
+  margin-top: 3px;
+
+}
+
+.menu-model {
+  margin-left: 17%;
+  margin-top: 19px;
+  width: 60%;
+}
+
+.menu-model__item {
+  font: 600 15px/18px Semibold, arial, helvetica, sans-serif;
+  position: relative;
+  margin-right: 24px;
+  color: #000;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .5s;
+}
+
+.menu-model__item:hover {
+  opacity: .5;
+  color: #e51937;
+}
+
+.menu-model__item_active::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e51937;
+}
+
+.menu-model__item::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  width: 0;
+  height: 2px;
+  margin-top: 5px;
+  background: #e51937;
+  opacity: 0;
+  transition: opacity .5s, width .5s;
+}
+
+.menu-model__item:hover::after,
+.menu-model__item_active::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.menu-model__item:first-child {
+  color: #e51937;
+  margin-left: 13px;
+}
+.menu-model__item:nth-child(2n) {
+  left: 35px;
+}
+
+.menu-model__item:nth-child(3n) {
+  left: 33px;
+}
+
+.menu-model__item:nth-child(4n) {
+  left: 49px;
+}
+
+.menu-model__item:last-child {
+  left: 67px;
+}
+
+.menu-entrance {
+  padding-top: 18px;
+  padding-left: 6px;
+  width: 15%;
+}
+
+.menu-entrance__item {
+  font: 600 15px/18px Semibold, arial, helvetica, sans-serif;
+  color: #000;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-right: 26px;
+  transition: opacity .5s;
+  cursor: pointer;
+}
+
+.menu-entrance__item:hover {
+  opacity: .5;
+}
+
+.lines {
+  display: block;
+  border-bottom: 2px solid red;
+  width: 24px;
+  padding-top: 4px;
+  height: 16px;
+  margin: 13px 63px 0 0;
+}
+
+.lines::before,
+.lines::after {
+  display: flex;
+  position: relative;
+  content: "";
+  border-bottom: 2px solid red;
+  padding-bottom: 4px;
+}
+
+.main1__name-model {
+  font: 600 90px/110px Semibold, arial, helvetica, sans-serif;
+  color: #000;
+  text-align: center;
+  padding-top: 3px;
+  margin: 0;
+  z-index: 2;
+}
+
+.main1__welcome {
+  font: 500 15px/19px Medium, arial, helvetica, sans-serif;
+  color: #000;
+  margin-top: -1%;
+  letter-spacing: 1px;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.main1__wordcar {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  margin-top: -9%;
+}
+
+.main1__wordcaripad,
+.main1__wordcarmobil {
+  display: none;
+}
+
+.main1__car {
+  display: block;
+  padding-left: 14%;
+  padding-top: 1%;
+  margin-bottom: 25px;
+  z-index: 2;
+}
+
+.signs {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 57%;
+  height: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-speed {
+  flex-basis: 22%;
+  padding-left: 10px;
+}
+
+.sign-speed__wrapper {
+  display: inline-flex;
+}
+
+.sign-speed__img {
+  float: left;
+  margin: 0 10px 0 0;
+  padding-top: 10px;
+}
+
+.sign-speed__unit {
+  padding: 14px 0 0 5px;
+  margin: 0;
+}
+
+.sign-speed__max{
+  position: relative;
+  margin: -3px 0 0 0;
+}
+
+.sign-way {
+  width: 20%;
+  position: relative;
+  margin-right: 9px;
+  padding-left: 15px;
+}
+
+.sign-way__wrapper {
+  display: inline-flex;
+}
+
+.sign-way__img {
+  float: left;
+  padding-top: 6px;
+}
+
+.sign-way__long {
+  padding-left: 6px;
+}
+
+.sign-way__unit {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+
+.sign-way__text {
+  padding-left: 30%;
+  margin-top: -3px;
+  letter-spacing: 1px;
+}
+
+.sign-speed__time, .sign-way__long {
+  font: 600 35px/43px Semibold, arial, helvetica, sans-serif;
+  margin: 0;
+}
+
+.sign-speed__unit, .sign-way__unit {
+  font: 600 20px/24px Semibold, arial, helvetica, sans-serif;
+}
+
+.sign-speed__max, .sign-way__text {
+  font: normal 12px/15px Regular, arial, helvetica, sans-serif;
+}
+
+.sign-test {
+  display: inline-block;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 40px;
+  width: 16%;
+}
+
+.sign-test__drive {
+  font: bold 13px/16px Bold, arial, helvetica, sans-serif;
+  padding-left: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sign-test__img {
+  padding-top: 7px;
+  float: left;
+  padding-left: 6px;
+}
+
+.sign-test__img1 {
+  display: none;
+}
+
+@keyframes forbutton {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(20deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.footer__button-order {
+  position: relative;
+  font: bold 13px/16px Bold, arial, helvetica, sans-serif;
+  letter-spacing: 1px;
+  color: #e51937;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 39px;
+  border: 2px solid #e51937;
+  text-align: center;
+  margin-top: 9px;
+  margin-right: 12px;
+  cursor: pointer;
+  opacity: .8;
+  transition: opacity .3s;
+  animation: forbutton .8s infinite ease;
+}
+
+.footer__button-order:hover {
+  background-color: #e51937;
+  color: #fff;
+  opacity: 1;
+  transition: color, background-color, opacity .5s;
+  animation: none;
+}
+
+.main1__vector {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.main2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main2__wrapper {
+  width: 30%;
+  z-index: 10;
+}
+
+.main2__infocar, .main3__wrapper {
+  background: #E51937;
+}
+
+.main2__name-model {
+  display: block;
+  position: absolute;
+  font: 600 70px/85px Semibold, arial, helvetica, sans-serif;
+  color: #e51937;
+  padding-top: 43px;
+  padding-left: 80px;
+  margin-bottom: 0;
+  z-index: 30;
+}
+
+.main2__infocar {
+  margin-top: 33px;
+  width: 30.5%;
+  display: block;
+  z-index: 20;
+}
+
+.main2__infocar-wrapper {
+  width: 80%;
+  padding-left: 11%;
+  padding-top: 12%;
+}
+
+.main2__title {
+  margin: 0;
+  padding-left: 3px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.main2__description {
+  margin: 0;
+  width: 90%;
+  padding-left: 3px;
+  padding-top: 1px;
+  letter-spacing: 1px;
+  padding-bottom: 18%;
+}
+
+.sign-display {
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+.sign-display__img {
+  float: left;
+  padding-top: 10px;
+  padding-left: 3px;
+}
+
+.sign-display__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.sign-display__size {
+  padding-left: 17px;
+  margin: 0;
+}
+
+.sign-display__inches {
+  padding-left: 14px;
+  padding-top: 13px;
+  margin: 0;
+}
+
+.sign-display__text {
+  margin: 0;
+  padding-left: 60px;
+  margin-top: -4px;
+  letter-spacing: 1px;
+  padding-bottom: 3px;
+}
+
+.sign-wi-fi {
+  display: block;
+  width: 70%;
+  padding-top: 3px;
+  margin-bottom: 25px;
+}
+
+.sign-wi-fi__img {
+  float: left;
+  padding-top: 23px;
+}
+
+.sign-wi-f__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 19px;
+}
+.sign-wi-fi__software {
+  margin: 0;
+  padding-top: 10px;
+  letter-spacing: 1px;
+}
+
+.sign-wi-fi__text {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.sign-bag {
+  display: block;
+  width: 70%;
+  margin-bottom: 45%;
+  padding-top: 3px;
+}
+
+.sign-bag__img {
+  float: left;
+  padding-top: 10px;
+  padding-left: 3px;
+}
+
+.sign-bag__wrapper {
+  display: flex;
+  padding-left: 25px;
+}
+
+.sign-bag__volume {
+  margin: 0;
+}
+
+.sign-bag__software {
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
+.sign-bag__text {
+  margin-top: -3px;
+  padding-left: 25%;
+  letter-spacing: 1px;
+}
+
+.main2-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding-top: 12px;
+  padding-left: 11%;
+}
+
+.main2-buttons__more-info {
+  margin-right: 10px;
+  display: block;
+  width: 55%;
+}
+
+.main2-buttons__text {
+  padding-left: 30px;
+  padding-top: 2px;
+  letter-spacing: 1px;
+}
+
+.more-info__img {
+  padding-top: 8px;
+  float: left;
+}
+
+.main2-buttons__order {
+  margin-right: 3px;
+  margin-left: 10px;
+}
+
+.main2-buttons__order:hover,
+.main3-buttons__order:hover {
+  background-color: #fff;
+  color: #e51937;
+  opacity: 1;
+  transition: background-color, color, opacity .5s;
+  animation: none;
+}
+
+.main2__car {
+  display: block;
+  margin-top: 20.5%;
+  z-index: 10;
+}
+
+.main2__car1, .main2__car2 {
+  display: none;
+}
+
+.main3 {
+  display: flex;
+}
+
+.main3__wrapper {
+  display: block;
+  width: 30.5%;
+  margin: 0;
+}
+
+.main3__title {
+  padding-left: 13%;
+  padding-top: 6.5%;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.main3__description {
+  width: 73%;
+  margin: 0;
+  padding-left: 57px;
+  letter-spacing: 1px;
+  padding-top: 12px;
+}
+
+.main3__protection {
+  margin: 0;
+  padding-top: 13%;
+  padding-left: 13%;
+  letter-spacing: 2px;
+}
+
+.main3__protection-list {
+  display: block;
+  position: relative;
+  padding-left: 48px;
+  letter-spacing: 1px;
+  border-spacing: 7px;
+  margin-top: -2px;
+  margin-bottom: 20%;
+}
+
+.main3__protection-star {
+  padding-left: 22px;
+}
+
+.main3__img {
+  margin-right: 4px;
+}
+
+.sign-star {
+  display: flex;
+  width: 65%;
+  padding-left: 15%;
+  padding-top: 3px;
+  margin-bottom: 14%;
+}
+
+.sign-star__img {
+  float: left;
+  padding-top: 8px;
+  width: 62px;
+  height: 74px;
+}
+
+.sign-star__wrapper {
+  display: block;
+  padding-left: 8%;
+  letter-spacing: 1px;
+}
+
+.sign-star__text1 {
+  padding-top: 2px;
+  margin: 0;
+}
+
+.sign-star__text2 {
+  margin: -5% 0;
+  padding: 0;
+}
+
+.main3-buttons {
+  display: flex;
+  margin-left: 6%;
+  justify-content: space-between;
+  margin-bottom: 13%;
+  width: 82%;
+}
+
+.main3-buttons__more {
+  padding-top: 7px;
+  padding-left: 12px;
+  height: 100%;
+}
+
+.main3-buttons__more-info {
+  padding-top: 13px;
+  padding-right: 20px;
+  letter-spacing: 1px;
+}
+
+.main3-car {
+  float: right;
+  position: absolute;
+  padding-left: 24%;
+  padding-top: 12%;
+}
+
+.main3-car1, .main3-car2 {
+  display: none;
+}
+
+.main2__title,
+.main3__title,
+.main3__protection {
+  font: 600 30px/37px Semibold, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+.main2__description,
+.main3__description {
+  font: 500 15px/18px Medium, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+.sign-display__size,
+.sign-bag__volume {
+  font: 600 35px/43px Semibold, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+.sign-display__inches,
+.sign-bag__software {
+  font: 600 20px/24px Semibold, arial, helvetica, sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.sign-display__text,
+.sign-wi-fi__text,
+.sign-bag__text {
+  font: normal 12px/15px Regular, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+.sign-wi-fi__software {
+  font: 600 20px/18px Semibold, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+.main3__list {
+  font: bold 10px/12px Bold, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+.main2-buttons__text,
+.main3-buttons__more-info,
+.main2-buttons__order,
+.main3-buttons__order {
+  font: bold 13px/16px Bold, arial, helvetica, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.main2-buttons__order,
+.main3-buttons__order {
+  padding: 10px 40px;
+  letter-spacing: 1px;
+  border: 2px solid #fff;
+  opacity: .8;
+  animation: forbutton .8s infinite ease;
+}
+
+.main3__protection-list {
+  font: bold 17px/21px Bold, arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+.sign-star__text1 {
+  font: 600 50px/61px Semibold, arial, helvetica, sans-serif;
+  color: #fff;
+}
+.sign-star__text2 {
+  font: 600 25px/30px Semibold, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+@media (min-width: 700px) and (max-width: 1300px) {
+  .header {
+    margin-bottom: 10%;
+  }
+
+  .logo {
+    padding-left: 13px;
+  }
+
+  .menu-model {
+    display: none;
+  }
+
+  .menu-entrance {
+    display: none;
+  }
+
+  .lines {
+    width: 35px;
+    padding-bottom: 11px;
+    margin: 5px 0 0 68%;
+    border-bottom: 3px solid red;
+  }
+
+  .lines::before,
+  .lines::after {
+    padding-bottom: 7px;
+    border-bottom: 3px solid red;
+  }
+
+  .main1__welcome {
+    margin-top: -14px;
+    margin-bottom: 10%;
+  }
+
+  .main1__car {
+    width: 92%;
+    padding-left: 4%;
+    margin-bottom: 40px;
+  }
+
+  .main1__wordcar {
+    display: none;
+  }
+
+  .main1__wordcaripad {
+    display: block;
+    position: absolute;
+    margin-top: -13%;
+    z-index: 1;
+  }
+
+  .signs {
+    width: 70%;
+    flex-flow: row wrap;
+    margin-bottom: 5.5%;
+  }
+
+  .sign-speed {
+    flex-basis: 40%;
+    padding-left: 4%;
+  }
+
+  .sign-speed__time, .sign-way__long {
+    font: 600 50px/61px Semibold, arial, helvetica, sans-serif;
+    padding-left: 3px;
+  }
+
+  .sign-speed__unit {
+    padding: 20px 0 0 12px;
+  }
+
+  .sign-speed__max {
+    padding-left: 17%;
+  }
+
+  .sign-speed__img {
+    width: 35%;
+    padding-top: 15px;
+  }
+
+  .sign-way {
+    flex-basis: 45%;
+    margin-right: 0;
+  }
+
+  .sign-way__long {
+    padding-left: 9px;
+  }
+
+  .sign-way__unit {
+    padding: 5px 0 0 15px;
+  }
+
+  .sign-way__img {
+    width: 23%;
+    padding: 10px 0 0 9px;
+  }
+
+  .sign-test {
+    display: block;
+    padding-left: 11%;
+    padding-top: 9%;
+    flex-basis: 30%;
+  }
+
+  .sign-test__drive {
+    font: bold 16px/20px Bold, arial, helvetica, sans-serif;
+    color: #e51937;
+    padding-left: 27%;
+  }
+
+  .sign-test__img {
+    display: none;
+  }
+
+  .sign-test__img1 {
+    display: inline;
+    float: left;
+    padding-top: 10px;
+  }
+
+  .footer__button-order {
+    animation: none;
+    margin-right: 11%;
+    padding: 17px 69px;
+    margin-top: 47px;
+    background: #e51937;
+    color: #fff;
+  }
+
+  .main2 {
+    flex-direction: column;
+  }
+
+  .main2__car {
+  display: none;
+  }
+
+  .main2__car1 {
+    display: block;
+    padding-top: 25%;
+  }
+
+  .main2__name-model {
+    padding-top: 15px;
+    padding-left: 56.5%;
+  }
+
+  .main2__infocar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .main2__infocar-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 32px;
+    padding-top: 7%;
+    width: 90%;
+  }
+
+  .main2__infocar-wrapper1 {
+    width: 80%;
+  }
+
+  .main2__title {
+    padding-top: 5px;
+    margin-bottom: 11px;
+  }
+
+  .main2__description {
+    padding-bottom: 20px;
+}
+
+  .main2-sign__wrapper {
+    flex-basis: 60%;
+    padding-left: 8%;
+  }
+
+  .sign-display {
+    padding-top: 3px;
+    margin-bottom: 25px;
+  }
+
+  .sign-display__size {
+    padding: 2px 0 0 20px;
+  }
+
+  .sign-display__inches {
+    padding: 16px 0 0 10px;
+  }
+
+  .sign-display__text {
+    margin-top: -1px;
+    width: max-content;
+  }
+
+  .sign-wi-fi {
+    margin-bottom: 20px;
+  }
+  .sign-wi-fi__img {
+    padding-top: 13px;
+  }
+
+  .sign-wi-fi__software {
+    padding: 0;
+  }
+
+  .sign-bag {
+    margin-bottom: 0;
+  }
+
+  .sign-bag__text {
+    padding-left: 33%;
+  }
+
+
+  .main2-buttons {
+    flex-wrap: wrap;
+    padding-top: 6%;
+    margin-bottom: 53px;
+  }
+
+  .main2-buttons__order {
+    font: bold 16px/20px Bold, arial, helvetica, sans-serif;
+    padding: 15px 62px;
+  }
+
+  .main2-buttons__more-info {
+    padding-left: 10%;
+    width: 34%;
+    margin-right: 27px;
+  }
+  .main2-buttons__text {
+    font: bold 16px/20px Bold, arial, helvetica, sans-serif;
+    padding: 3px 0 0 24%;
+  }
+  .more-info__img {
+    width: 15%;
+    padding-top: 13px;
+    padding-left: 8px;
+  }
+
+  .main3 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main3-car {
+    display: none;
+  }
+
+  .main3-car1 {
+    display: block;
+    position: relative;
+    padding-top: 10%;
+    margin-bottom: 35px;
+    margin-left: -4%;
+  }
+
+  .main3__wrapper {
+    width: 100%;
+    background: #e51937;
+  }
+
+
+  .main3__wrapper1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .main3__wrapper2 {
+    width: 50%;
+  }
+
+  .main3__title {
+    padding-left: 35px;
+    padding-top: 40px;
+  }
+
+  .main3__description {
+    width: 84%;
+    padding-left: 35px;
+  }
+
+  .main3__wrapper3 {
+
+  }
+
+  .main3__protection {
+    padding: 19% 0 0 11%;
+  }
+
+  .main3__protection-list {
+    padding-left: 30px;
+    margin-bottom: 17%;
+  }
+
+  .sign-star {
+    display: none;
+  }
+
+  .main3-buttons {
+    flex-wrap: wrap;
+    width: 70%;
+    padding-left: 11%;
+    padding-top: 1px;
+    margin-bottom: 8.5%;
+  }
+
+  .main3-buttons__more-info {
+    font: bold 16px/20px Bold, arial, helvetica, sans-serif;
+    padding-top: 20px;
+    padding-right: 40px;
+  }
+
+  .main3-buttons__more {
+    width: 6%;
+    padding: 14px 10px 0 4.5%;
+  }
+
+  .main3-buttons__order {
+    font: bold 16px/20px Bold, arial, helvetica, sans-serif;
+    padding: 15px 62px;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 699px) {
+  .main1__name-model {
+    font: 600 50px/61px Semibold, arial, helvetica, sans-serif;
+  }
+
+  .main1__welcome {
+    font: 500 10px/12px Medium, arial, helvetica, sans-serif;
+    margin-top: -6px;
+    padding-left: 8px;
+  }
+
+  .sign-speed__time, .sign-way__long {
+    font: 600 27px/33px Semibold, arial, helvetica, sans-serif;
+  }
+
+  .sign-speed__unit, .sign-way__unit {
+    font: 600 15px/18px Semibold, arial, helvetica, sans-serif;
+  }
+
+  .sign-speed__max, .sign-way__text {
+    font: normal 10px/12px Regular, arial, helvetica, sans-serif;
+  }
+
+  .header {
+    padding-top: 0;
+    justify-content: space-between;
+    margin-bottom: 7%;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .logo-img {
+    width: 80%;
+    padding-left: 2px;
+    padding-top: 2px;
+  }
+
+  .lines {
+    padding-top: 1px;
+    margin-right: 6%;
+  }
+
+  .menu-model,
+  .menu-entrance,
+  .main2-sign__wrapper,
+  .main2-buttons,
+  .main3__wrapper3,
+  .main3-buttons {
+    display: none;
+  }
+
+  .main1__wordcar {
+    display: none;
+  }
+
+  .main1__wordcarmobil {
+    display: block;
+    position: absolute;
+  }
+
+  .main1__car {
+    padding-top: 11%;
+    padding-left: 3%;
+    width: 95%;
+  }
+  .signs {
+    width: 85%;
+    flex-flow: row wrap;
+    margin-bottom: 2%;
+  }
+
+  .sign-speed {
+    flex-basis: 45%;
+    padding-left: 4%;
+  }
+
+  .sign-speed__img {
+    width: 30%;
+    padding-top: 8px;
+  }
+
+  .sign-speed__unit {
+    padding-left: 9px;
+    margin-bottom: 3px;
+  }
+
+  .sign-way {
+    flex-basis: 45%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .sign-way__img {
+    width: 21%;
+    padding: 4px 0 0 3px;
+  }
+
+  .sign-way__long {
+    padding-left: 10px;
+  }
+
+  .sign-way__unit {
+    padding-left: 9px;
+    margin-bottom: 3px;
+  }
+
+  .sign-test {
+    padding-left: 0;
+    width: 40%;
+  }
+
+  .footer__button-order {
+    margin-right: 9px;
+  }
+
+  .main2__name-model {
+    display: none;
+  }
+
+  .main2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main2__car {
+    display: none;
+  }
+
+  .main2__car2 {
+    display: block;
+  }
+  
+  .main2__infocar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .main2__infocar-wrapper {
+    padding: 20px 0 0 24px;
+    width: 90%;
+  }
+
+  .main2__description {
+    padding-left: 3px;
+    padding-bottom: 37px;
+  }
+
+  .main3 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main3-car {
+    display: none;
+  }
+
+  .main3-car2 {
+    display: block;
+    position: relative;
+    padding-top: 15%;
+    padding-right: 14px;
+    margin-bottom: 33px;
+  }
+
+  .main3__wrapper {
+    width: 100%;
+  }
+
+  .main3__title {
+    width: 90%;
+    padding-top: 5%;
+    padding-left: 31px;
+    margin: 0;
+  }
+
+  .main3__description {
+    width: 85%;
+    padding-left: 31px;
+    margin-bottom: 19%;
+  }
+  }
+
+}
